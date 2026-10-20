@@ -65,7 +65,7 @@ final class RunnerTest extends CIUnitTestCase
     public function testTrackingTableUsesDatabasePrefix(): void
     {
         self::assertTrue($this->connection->tableExists('seeds'));
-        self::assertContains('db_seeds', $this->connection->listTables());
+        self::assertContains($this->connection->getPrefix() . 'seeds', $this->connection->listTables());
     }
 
     public function testMissingTrackingTableReportsMigrationCommand(): void
