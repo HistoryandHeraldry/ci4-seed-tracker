@@ -4,6 +4,9 @@ parameters:
         - src
     bootstrapFiles:
         - tests/_support/constants.php
+    scanFiles:
+        - vendor/codeigniter4/framework/system/Common.php
+        - tests/_support/app/Config/Database.php
     tmpDir: build/phpstan
     parallel:
         maximumNumberOfProcesses: 1

@@ -29,12 +29,8 @@
         "sort-packages": true
     },
     "scripts": {
-        "analyse": "phpstan analyse --no-progress",
+        "analyse": "phpstan analyse --no-progress --debug",
         "test": "phpunit",
-        "quality": [
-            "@composer validate --strict",
-            "@analyse",
-            "@test"
-        ]
+        "quality": ["@composer validate --strict", "@analyse", "@test"]
     }
 }
