@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="vendor/codeigniter4/framework/system/Test/bootstrap.php"
+         colors="true"
+         failOnRisky="true"
+         failOnWarning="true"
+         cacheDirectory="build/.phpunit.cache">
+    <testsuites>
+        <testsuite name="CI4 Seed Tracker">
+            <directory>tests</directory>
+        </testsuite>
+    </testsuites>
+    <php>
+        <server name="app.baseURL" value="http://example.com/"/>
+        <server name="CODEIGNITER_SCREAM_DEPRECATIONS" value="0"/>
+        <const name="HOMEPATH" value="./"/>
+        <const name="CONFIGPATH" value="./tests/_support/app/Config/"/>
+        <const name="PUBLICPATH" value="./tests/_support/public/"/>
+    </php>
+</phpunit>

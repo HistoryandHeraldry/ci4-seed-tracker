@@ -1,0 +1,9 @@
+parameters:
+    level: 8
+    paths:
+        - src
+    bootstrapFiles:
+        - tests/_support/constants.php
+    tmpDir: build/phpstan
+    parallel:
+        maximumNumberOfProcesses: 1
